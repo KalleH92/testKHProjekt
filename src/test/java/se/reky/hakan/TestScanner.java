@@ -19,4 +19,5 @@ public class TestScanner {
     @Test
     void testScanner() {assertEquals("Hello world", scanner.nextLine());
     }
+
 }

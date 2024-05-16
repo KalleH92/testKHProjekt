@@ -72,8 +72,8 @@ public class PlayerControllerTest {
 
         firstPlayer.click();
 
-        WebElement playerName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("player-name")));
+        List<WebElement> webElements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("span")));
 
-        assertTrue(playerName.isDisplayed());
+        assertTrue(webElements.get(0).isDisplayed());
     }
 }

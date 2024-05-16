@@ -13,7 +13,7 @@ public class ActorTest {
     @BeforeEach
     void setUp() {
         player = new Player("Kalle", 30, 10);
-        goblin = new Goblin("Alex", 30, 10);
+        goblin = new Goblin("Agu", 30, 10);
     }
 
     @DisplayName("Testing if attack is succesful")

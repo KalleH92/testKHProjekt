@@ -12,15 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PlayerInteractionTest {
     private Player player;
     private PlayerInteraction playerInteraction;
-    private Goblin goblin;
 
     private PlayerInteraction setUpScanner(String dataForScanner) {
         Scanner scanner = new Scanner(dataForScanner);
         IOHandler ioHandler = new IOHandler(scanner);
         player = new Player();
         return new SimplePlayerInteraction(ioHandler);
-
     }
+
     @Test
     void setupPlayerTest() {
         playerInteraction = setUpScanner("Player_1");

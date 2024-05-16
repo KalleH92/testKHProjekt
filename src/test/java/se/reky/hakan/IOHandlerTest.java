@@ -11,23 +11,21 @@ class IOHandlerTest {
 
     private IOHandler ioHandler;
 
-    private IOHandler testHandler (String dataForScanner) {
-        Scanner scanner = new Scanner(dataForScanner);
-        return new IOHandler(scanner);
+    private IOHandler getIoHandler (String dataForScanner) {
+        ioHandler = new IOHandler(new Scanner(dataForScanner));
+        return ioHandler;
     }
 
     @DisplayName("Testing input from new instance scanner")
     @Test
     void test_input_from_scanner(){
-        ioHandler = testHandler("privet");
-        assertEquals("privet", ioHandler.nextLine());
+        assertEquals("test", getIoHandler("test").nextLine());
     }
 
-    @DisplayName("Testing if its true was retuend")
+    @DisplayName("Testing if its true was returned")
     @Test
     void hasNextIntTest(){
-        ioHandler = testHandler("1");
-        assertTrue(ioHandler.hasNextInt());
+        assertTrue(getIoHandler("5").hasNextInt());
     }
 
 }
